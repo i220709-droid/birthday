@@ -1,0 +1,27 @@
+const text = `On 16th of April, i got in touch with a anime obsessed person whose name is Wasif🌸 I dint know that this date would be the best date of my life because i got to know you as a person, as a best human being, as a best friend, as a best person in my life🫠 This is our Very first brithday but ur so far , i wish i could come and hug you and wish you a proper happy brithday but 😔... Sometimes I look at you and realize how grateful I am that life brought you to me. Not for the highlights but for the quiet, everyday moments that truly matter like daily calls, daily rants. I genuinely wait for the whole day to pass so that i can listen to your beautiful calming voice🙂‍↕️ I don't know exactly when it started. It was slow, soft and unplanned. But somewhere between random conversations, silly arguments and silent understanding amidst unsaid words you became an integral part of my entire existence. You became the person I look for in crowd The name that makes my heart pause for a second. You've quietly become my comfort, my peace and the most precious part of my heart. Today it's your birthday and even though I want to be with you badly,! can't but I want you to know how effortlessly lovable you are, not because you try to be, not because you change yourself but simply because of who you are. You random text different time pe Without any ego makes my heart melt. As today you askedwhat m i doing like feeling hi esi hoti apni apni k yar isko ye b hai k me kya krhi hu🙂‍↕️ Ku k im also like this I want tro know your every minute😋 Bina kuch kahay rants sunty mere, itni care ki though tmhy periods ka kuch nahi pata tha, alleyy mela bacha kehty to mri sari temsion door hojati k yar he is with me , he understands what im going through, tmhra try krna hi mre lie kafi hai, atleast you are trying. Khairrr bht hogaya Ab mje bday treat b chahye🍬🍭 MY WISH FOR U I hope your future brings you endless happiness, success, and peace in everything you do. May every dream you hold in your heart slowly come. Allah tmhy sb khushyan de, wo cheezen jo aap mangty ho or wo b jo ap nai mangty wo sb puri hon. Allah miyan apko umrah pr leke jaye hajj pe lek jaye jo ap ki dilli khwahishaat hen wi puri hon. Me hu ya na hu, allah miyan hamesha tmhy protect rkhen fazool logo se, hamesha tmhy hifz o aman me rkhen ameen. I'll always be here supporting you. believing in and wishing you nothing but the best😌🥰😘❤️ Happiest Birthday Once Again My Wasif ♥️`;
+
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 20);
+    }
+}
+
+typeWriter();
+
+function showLove() {
+    for (let i = 0; i < 30; i++) {
+        let heart = document.createElement("div");
+        heart.innerHTML = "💖";
+        heart.classList.add("heart");
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.top = "100%";
+        heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 4000);
+    }
+}
